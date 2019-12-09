@@ -1,0 +1,22 @@
+class Abc {	 // ready obj when load class
+	private static Abc a = new Abc();
+	
+	private Abc() {			
+	
+	}
+	static Abc getObj(){		
+		return a;
+	}
+}
+
+public class SpringDemo {
+	public static void main(String[] args) {
+		
+		Abc a = Abc.getObj();
+		System.out.println(a.hashCode());
+		
+		Abc a1 = Abc.getObj();
+		System.out.println(a1.hashCode());
+		
+	}
+}
